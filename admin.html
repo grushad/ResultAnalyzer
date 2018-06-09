@@ -1,0 +1,157 @@
+<html>
+<head>
+
+	<link rel="stylesheet" href="style.css">
+	<title>Analyzer</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+	<style type="text/css">
+		#background{
+			background-image: none;
+			background-color: #eeeeff;
+		}
+		.login{
+			padding: 20px;
+			margin-top: 20px;
+		}
+		.modal-content{
+			padding: 20px;
+		}
+		.btn-block{
+			margin-top: 20px;
+		}
+		#changep{
+			width: 200px;
+			margin-top: 2px;
+		}
+		.button-custom{
+			border-radius: 20px;
+			background-color: #3f51b5;
+			color: white;
+			border: none;
+			width: 120px;
+			padding-top:5px;
+			padding-bottom: 5px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.button-custom:hover{
+			background-color: #bdbdbd;
+			color: #3f51b5;
+		}
+		.font2{
+			color: #3f51b5;
+
+		}
+		.font3{
+			color: #bdbdbd;
+		}
+		.panel{
+			margin-top: 20px;
+		}
+		.row{
+			margin: 15px;
+		}
+		.b{
+			font-style: normal;
+		}
+		a:hover{
+			text-decoration: none;
+			background-color: #bdbdbd;
+
+		}
+	</style>
+
+</head>
+
+<body id="background"> 
+
+<!--navigation bar-->
+<nav class="navbar ">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#"><img src="Logo.png" style="height: 60px;" /></a>
+		</div>
+		<ul class="nav navbar-nav navbar-custom">
+			<li>	<a href="index.html" class="inv-font">Home</a>	</li> 
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li>	<a href="#" class="inv-font"> <span class="glyphicon glyphicon-user"></span>Logout</a>	</li>
+		</ul>
+	</div>
+</nav>
+
+
+<!--settings panel-->
+<div class="panel panel-default" style="margin: 40px;"> 
+	<div class="panel-heading" align="center"><span class="glyphicon glyphicon-cog font2"></span> <h4 style="color: #3f51b5;"> Settings</h4> </div>
+  <div class="panel-body">
+  	<div class="row">
+  		<div class="col-md-3"> </div>
+  		<div class="col-md-3 font2">Username: <input type="text" name="Username" placeholder="admin" disabled style="border-radius: 0px; padding: 5px;"> <span class="glyphicon glyphicon-pencil" style="color:#3f51b5;">
+  	</span> </div>
+  		<div class="changep col-md-3">  <button type="button" class="btn btn-block" id="changep" data-toggle="modal" data-target="#changepass" style="color:#3f51b5;">Change Password</button>
+  	</div>
+  	</div>
+  </div>
+</div>
+
+<!--upload button-->
+<div class="row">
+	<div class="col-md-5"></div>
+	<div class="col-md-3"><a href="admin_upload.html" class="but-link" style="color: white;"><button type="button" class="btn btn-block button-custom" style="margin-left: 30px;"> Upload Files </a> </button> </div>
+</div>
+
+
+<!--uploaded files panel-->
+<div class="panel panel-default" style="margin: 40px;">
+	<div class="panel-heading" align="center"> <h4 style="color: #bdbdbd;">Files you've uploaded:</h4> </div>
+ 
+  	<div class="panel-body">
+  		<div class="row">
+  			<div class="col-md-1"></div>
+  			<div class="col-md-3 font2"> Filename </div>
+  			<div class="col-md-3 font3"> Uploaded at (date&time) </div>
+  			<div class="col-md-2"><a href="#"> View </a></div>
+  			<div class="col-md-1"><span class="glyphicon glyphicon-trash" style="color:#3f51b5;"></span></div> 
+  		</div>
+  		<div class="row">
+  			<div class="col-md-1"></div>
+  			<div class="col-md-3 font2"> Filename </div>
+  			<div class="col-md-3 font3"> Uploaded at (date&time) </div>
+  			<div class="col-md-2"><a href="#"> View </a></div>
+  			<div class="col-md-1"><span class="glyphicon glyphicon-trash" style="color:#3f51b5;"></span></div> 
+  		</div>
+  		<div class="row">
+  			<div class="col-md-1"></div>
+  			<div class="col-md-3 font2"> Filename </div>
+  			<div class="col-md-3 font3"> Uploaded at (date&time) </div>
+  			<div class="col-md-2"><a href="#"> View </a></div>
+  			<div class="col-md-1"><span class="glyphicon glyphicon-trash" style="color:#3f51b5;"></span></div> 
+  		</div>
+  
+  	</div>
+</div>
+
+
+<!--password change modal-->
+<div class="modal fade" id="changepass">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            	<button type="button" class="close" data-dismiss="modal">&times;</button>
+            	<input id="password" class="form-control login" type="password" name="currentpass" placeholder="Enter Current Password"/>
+            	<input id="password" class="form-control login" type="password" name="newpass1" placeholder="Enter New Password"/>
+            	<input id="password" class="form-control login" type="password" name="newpass2" placeholder="Confirm Password"/>
+
+                    <a href="#"><button class="btn btn-block">Change Password</button></a>
+              
+            	</div> </div> </div>  
+
+
+
+</body>
+</html>
