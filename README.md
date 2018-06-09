@@ -1,2 +1,2 @@
 # ResultAnalyzer
-A college project that displays result as per requests
+A college project that displays result of students
